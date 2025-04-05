@@ -110,7 +110,7 @@ def counts():
 
 @app.route("/send_data", methods=["POST"])
 def send_data():
-    api_url = "http://127.0.0.1:8000/api/store-detections"
+    api_url = os.environ.get("API_URL", "http://127.0.0.1:8000/api/store-detections")
     try:
         response = requests.post(api_url, json={"detections": total_counts})
         return jsonify({"status": "sent", "response": response.json()})
