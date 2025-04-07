@@ -10,7 +10,7 @@ from yt_dlp import YoutubeDL
 app = Flask(__name__)
 CORS(app)
 
-model_default  = YOLO("models/yolo11m.pt")
+model_default  = YOLO("models/yolo11s.pt")
 model_rickshaw = YOLO("models/best.pt")
 
 TARGET_CLASSES = {0: "Person", 1: "Bicycle", 2: "Car", 3: "Motorcycle", 5: "Bus", 7: "Truck"}
