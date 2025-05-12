@@ -3,7 +3,6 @@ flask-cors
 ultralytics
 opencv-python-headless
 numpy
-torch
 requests
 yt-dlp
 gunicorn
